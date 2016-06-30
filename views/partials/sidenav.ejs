@@ -1,0 +1,14 @@
+<div class='toc' ng-controller='NavigationController'>
+    <ul id='slide-out' class='side-nav fixed'>
+        <li class='no padding'>
+            <a class='logo' title='AZUGA' href='http://staging.azuga.com'>extentx</a>
+        </li>
+        
+        <li ng-repeat="item in items" class="no-padding" ng-class="{'active': item.id == states.activeItem}" ng-click="states.activeItem=item.id">
+            <a href='{{ item.target }}' alt='{{ item.title }}' title='{{ item.title }}'>
+                <i class='fa {{ item.icon }}'></i>
+                <span class="item-name hidden">{{ item.title }}</span>
+            </a>
+        </li>
+    </ul>
+</div>
